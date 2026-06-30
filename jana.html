@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Forever? ❤️</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", Arial, sans-serif;
+        }
+
+        body {
+            overflow: hidden;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(-45deg,
+                    #ff758c,
+                    #ff7eb3,
+                    #ffb199,
+                    #ffd6e0);
+            background-size: 400% 400%;
+            animation: bg 12s ease infinite;
+        }
+
+        @keyframes bg {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .container {
+            position: relative;
+            width: 950px;
+            height: 550px;
+            background: rgba(255, 255, 255, .18);
+            backdrop-filter: blur(12px);
+            border-radius: 35px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, .25);
+            text-align: center;
+            color: white;
+            overflow: hidden;
+        }
+
+        h1 {
+            margin-top: 70px;
+            font-size: 60px;
+            font-weight: bold;
+        }
+
+        p {
+            margin-top: 25px;
+            font-size: 30px;
+        }
+
+        button {
+            width: 180px;
+            height: 70px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 28px;
+            font-weight: bold;
+            transition: transform .2s, left .25s ease, top .25s ease;
+        }
+
+        #yes {
+            position: absolute;
+            left: 240px;
+            bottom: 70px;
+            background: #ff1744;
+            color: white;
+            box-shadow: 0 8px 20px rgba(255, 23, 68, .4);
+        }
+
+        #yes:hover {
+            transform: scale(1.08);
+        }
+
+        #no {
+            position: absolute;
+            left: 530px;
+            bottom: 70px;
+            background: white;
+            color: #ff1744;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, .15);
+        }
+
+        .heart {
+            position: absolute;
+            color: red;
+            pointer-events: none;
+            animation: float linear forwards;
+        }
+
+        @keyframes float {
+            from {
+                transform: translateY(100vh);
+                opacity: 1;
+            }
+
+            to {
+                transform: translateY(-120vh);
+                opacity: 0;
+            }
+        }
+
+        @media(max-width:1000px) {
+
+            .container {
+                width: 95%;
+                height: 500px;
+            }
+
+            h1 {
+                font-size: 42px;
+            }
+
+            p {
+                font-size: 24px;
+            }
+
+            button {
+                width: 150px;
+                height: 60px;
+                font-size: 24px;
+            }
+
+            #yes {
+                left: 18%;
+            }
+
+            #no {
+                left: 58%;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>❤️ Will You Be My Forever? ❤️</h1>
+
+        <p>Will you be my girlfriend? 🥹💕</p>
+
+        <button id="yes">Yes ❤️</button>
+
+        <button id="no">No 💔</button>
+
+    </div>
+
+    <script>
+
+        const noBtn = document.getElementById("no");
+        const container = document.querySelector(".container");
+
+        noBtn.addEventListener("mouseenter", moveButton);
+
+        function moveButton() {
+
+            const padding = 20;
+
+            const maxX = container.clientWidth - noBtn.offsetWidth - padding;
+            const maxY = container.clientHeight - noBtn.offsetHeight - padding;
+
+            const randomX = Math.random() * maxX;
+            const randomY = Math.random() * maxY;
+
+            noBtn.style.left = randomX + "px";
+            noBtn.style.top = randomY + "px";
+        }
+
+        document.getElementById("yes").onclick = function () {
+
+            document.body.innerHTML = `
+
+<style>
+
+body{
+margin:0;
+overflow:hidden;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+background:linear-gradient(135deg,#ff4e8d,#ff9a9e);
+font-family:Poppins,sans-serif;
+}
+
+.container2{
+text-align:center;
+color:white;
+animation:fadeIn 2s;
+}
+
+.ring{
+font-size:90px;
+animation:ring 1.5s infinite alternate;
+}
+
+#message{
+font-size:65px;
+font-weight:bold;
+margin-top:20px;
+}
+
+#love{
+font-size:30px;
+margin-top:25px;
+opacity:0;
+animation:appear 2s forwards;
+animation-delay:4s;
+}
+
+@keyframes fadeIn{
+from{opacity:0;}
+to{opacity:1;}
+}
+
+@keyframes ring{
+
+0%{transform:scale(.7);}
+100%{transform:scale(1.1);}
+}
+
+@keyframes appear{
+
+to{
+opacity:1;
+}
+
+}
+
+.heart{
+
+position:absolute;
+font-size:25px;
+animation:fly 6s linear infinite;
+}
+
+@keyframes fly{
+
+from{
+transform:translateY(100vh);
+opacity:1;
+}
+
+to{
+transform:translateY(-120vh);
+opacity:0;
+}
+
+}
+
+</style>
+
+<div class="container2">
+
+<div class="ring">💍</div>
+
+<h1 id="message"></h1>
+
+<p id="love">
+From this moment,
+every heartbeat of mine belongs to you. ❤️<br><br>
+
+Thank you for making me the happiest person alive. 🥹💕<br><br>
+
+I promise to love you,
+respect you,
+support you,
+protect you,
+and stand beside you forever. 🌹❤️
+</p>
+
+</div>
+
+`;
+
+            const msg = "❤️ yahhhh Finally.. ❤️";
+
+            let i = 0;
+
+            function typing() {
+
+                if (i < msg.length) {
+
+                    document.getElementById("message").innerHTML += msg.charAt(i);
+
+                    i++;
+
+                    setTimeout(typing, 120);
+
+                }
+
+            }
+
+            typing();
+
+            setInterval(() => {
+
+                const h = document.createElement("div");
+
+                h.className = "heart";
+
+                h.innerHTML = Math.random() > 0.5 ? "❤️" : "💖";
+
+                h.style.left = Math.random() * 100 + "vw";
+
+                h.style.fontSize = (20 + Math.random() * 40) + "px";
+
+                h.style.animationDuration = (3 + Math.random() * 4) + "s";
+
+                document.body.appendChild(h);
+
+                setTimeout(() => h.remove(), 7000);
+
+            }, 120);
+
+        }
+    </script>
+
+</body>
+
+</html>
